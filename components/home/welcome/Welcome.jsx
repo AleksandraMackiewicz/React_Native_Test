@@ -53,9 +53,21 @@ const Welcome = () => {
     data={jobTypes}
     renderItem={({ item }) => (
       <TouchableOpacity
-        style={styles.tab(activeJobType, item)} >
+        style={styles.tab(activeJobType, item)} 
+        onPress={() => {
+          setActiveJobType(item);
+          ReadableStreamDefaultController.push(`/search/${item}`)
+          router.push(`/search/${item}`)
+          
+        }}
+        
+        >
+          <Text style={styles.tabText(activeJobType, item)}>{ item }</Text>
       </TouchableOpacity>
     )}
+    keyExtractor={item => item}
+    contentContainerStyle={{ coulmnGap: SIZES.small}}
+    horizontal
     />
 
       </View>
