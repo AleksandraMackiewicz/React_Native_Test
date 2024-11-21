@@ -15,6 +15,11 @@ const Popularjobs = () => {
     query: 'React developer',
     num_pages: 1
   })
+
+  const [selectedJob, setSelectedJob] = useState()
+  const handleCardPress = (item) =>{
+    
+  }
   return (
     <View style={styles.container}>
       <View styles={styles.header}>
