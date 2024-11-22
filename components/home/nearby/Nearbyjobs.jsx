@@ -18,12 +18,14 @@ const Nearbyjobs = () => {
     num_pages: 1
   })
   return (
+    
     <View style={styles.container}>
       <View styles={styles.header}>
         <Text style={styles.headerTitle}>Nearby jobs</Text>
           <TouchableOpacity>
             <Text style={styles.headerBtn}>Show all</Text>
           </TouchableOpacity>
+          
       </View>
       <View style={styles.cardsContainer}>
         {isLoading ? (
@@ -41,7 +43,8 @@ const Nearbyjobs = () => {
         ))}
       </View>
     </View>
-  )
+  
+)
 }
 
 export default Nearbyjobs;
